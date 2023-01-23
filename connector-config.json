@@ -3,7 +3,7 @@
     "config": {
         "connector.class" : "io.debezium.connector.mongodb.MongoDbConnector",
         "tasks.max" : "1",
-        "mongodb.connection.string" : "mongodb+srv://root:JfWsnS2HHOiiZvbR@cluster0.mw6ie.mongodb.net/orders-db?retryWrites=true&w=majority",
+        "mongodb.connection.string" : "YOUR_CONNECTION_STRING",
         "topic.prefix" : "orders-db",
 		"mongodb.ssl.enabled" : true,
         "mongodb.members.auto.discover" : true,

@@ -3,7 +3,7 @@ server:
 spring:
   data:
     mongodb:
-      uri: mongodb+srv://root:JfWsnS2HHOiiZvbR@cluster0.mw6ie.mongodb.net/loyalty-db
+      uri: mongodb+srv://YOUR_CONNECTION_URI/loyalty-db
       database: loyalty-db
       minPoolSize: 10
       maxPoolSize: 50
