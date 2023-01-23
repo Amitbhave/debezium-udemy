@@ -1,0 +1,9 @@
+server:
+  port: 8081
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://root:JfWsnS2HHOiiZvbR@cluster0.mw6ie.mongodb.net/orders-db
+      database: orders-db
+      minPoolSize: 10
+      maxPoolSize: 50

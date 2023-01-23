@@ -1,0 +1,23 @@
+server:
+  port: 8082
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://root:JfWsnS2HHOiiZvbR@cluster0.mw6ie.mongodb.net/loyalty-db
+      database: loyalty-db
+      minPoolSize: 10
+      maxPoolSize: 50
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:29092
+      order:
+        groupId: loyalty-service
+        topicName: orders-db.orders-db.orders
+      concurrency: 4
+      enable-auto-commit: false
+      retryCount: 3
+      backoffIntervalMillis: 3000
+      maxPollIntervalMs: 12000000
+      maxPollRecords: 100
+      sessionTimeoutMs: 10000
+      fetchMaxBytes: 52428800

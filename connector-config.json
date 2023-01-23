@@ -1,0 +1,20 @@
+{
+    "name": "orders-connector",
+    "config": {
+        "connector.class" : "io.debezium.connector.mongodb.MongoDbConnector",
+        "tasks.max" : "1",
+        "mongodb.connection.string" : "mongodb+srv://root:JfWsnS2HHOiiZvbR@cluster0.mw6ie.mongodb.net/orders-db?retryWrites=true&w=majority",
+        "topic.prefix" : "orders-db",
+		"mongodb.ssl.enabled" : true,
+        "mongodb.members.auto.discover" : true,
+        "capture.mode" : "change_streams_update_full",
+		"snapshot.mode" : "never",
+        "database.include.list" : "orders-db",
+		"collection.include.list" : "orders-db.orders",
+		"skipped.operations" : "r",
+        "database.history.kafka.bootstrap.servers" : "kafka:9092",
+		"transforms" : "unwrap",
+        "transforms.unwrap.type" : "io.debezium.connector.mongodb.transforms.ExtractNewDocumentState",
+        "transforms.unwrap.add.headers" : "op"
+    }
+}
